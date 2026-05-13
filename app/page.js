@@ -148,6 +148,92 @@ export default function Home() {
     },
   ];
 
+  const caring_bottom = [
+    {
+      id: 1,
+      icon: "./images/logo_caring/logo1.png",
+      title: "Creating Streamlined Safeguarding Processes with OneRen",
+    },
+
+    {
+      id: 2,
+      icon: "./images/logo_caring/logo2.png",
+      title:
+        "What are your safeguarding responsibilities and how can you manage them?",
+    },
+
+    {
+      id: 3,
+      icon: "./images/logo_caring/logo3.png",
+      title: "Revamping the Membership Model with Triathlon Australia",
+    },
+  ];
+
+  const footer_logo = [
+    {
+      id: 1,
+      icon: "./images/logo_footer/intas.png",
+    },
+    {
+      id: 2,
+      icon: "./images/logo_footer/banh.png",
+    },
+    {
+      id: 3,
+      icon: "./images/logo_footer/chim.png",
+    },
+    {
+      id: 4,
+      icon: "./images/logo_footer/yt.png",
+    },
+  ];
+
+  const footer_list1 = [
+    {
+      id: 1,
+      text: "About us",
+    },
+    {
+      id: 2,
+      text: "Blog",
+    },
+    {
+      id: 3,
+      text: "Contact us",
+    },
+    {
+      id: 4,
+      text: "Pricing",
+    },
+    {
+      id: 5,
+      text: "Testimonials",
+    },
+  ];
+
+  const footer_list2 = [
+    {
+      id: 1,
+      text: "Help center",
+    },
+    {
+      id: 2,
+      text: "Terms of service",
+    },
+    {
+      id: 3,
+      text: "Legal",
+    },
+    {
+      id: 4,
+      text: "Privacy policy",
+    },
+    {
+      id: 5,
+      text: "Status",
+    },
+  ];
+
   return (
     <main>
       <header>
@@ -345,7 +431,7 @@ export default function Home() {
           <div className="community_bottom">
             <div className="community_logos">
               {community_right.map(function (item) {
-                return <img src={item.icon} alt="Icon" />;
+                return <img key={item.id} src={item.icon} alt="Icon" />;
               })}
               <h3 className="community_name">Meet all customers →</h3>
             </div>
@@ -353,6 +439,81 @@ export default function Home() {
         </div>
       </section>
       {/* <!-- Community Section --> */}
+
+      {/* <!--Caring Section --> */}
+      <section className="caring">
+        <div className="caring_header">
+          <h2>Caring is the new marketing</h2>
+          <p>
+            The Nexcent blog is the best place to read about the latest
+            membership insights, trends and more. See who's joining the
+            community, read about how our community are increasing their
+            membership income and lot's more.
+          </p>
+        </div>
+        <div className="caring_list">
+          {caring_bottom.map(function (item) {
+            return (
+              <div key={item.id} className="caring_card">
+                <img src={item.icon} alt="Icon" />
+                <div className="caring_content">
+                  <h3>{item.title}</h3>
+                  <h4 className="caring_link">Readmore →</h4>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+      {/* <!--Caring Section --> */}
+
+      {/* <!-- Footer Section --> */}
+      <section className="footer_section">
+        <h2>Pellentesque suscipit fringilla libero eu.</h2>
+        <button className="register">Get a Demo →</button>
+      </section>
+
+      <footer className="footer">
+        <div className="footer_container">
+          <div className="footer_left">
+            <div className="footer_left_logo">
+              <img src="./images/logo_footer/Logo.png" alt="Nexcent logo" />
+            </div>
+            <p className="footer_left_text1">Copyright © 2020 Nexcent ltd.</p>
+            <p>All rights reserved</p>
+
+            <div className="footer_logos">
+              {footer_logo.map(function (item) {
+                return <img key={item.id} src={item.icon} alt="Icon" />;
+              })}
+            </div>
+          </div>
+
+          <div className="footer_list">
+            <h3>Company</h3>
+            {footer_list1.map(function (item) {
+              return <p key={item.id}>{item.text}</p>;
+            })}
+          </div>
+
+          <div className="footer_list">
+            <h3>Support</h3>
+            {footer_list2.map(function (item) {
+              return <p key={item.id}>{item.text}</p>;
+            })}
+          </div>
+
+          <div className="footer_list">
+            <h3>Stay up to date</h3>
+            <div className="email_box">
+              <input type="text" placeholder="Your email address" />
+              <div className="send_icon">
+                <img src="./images/logo_footer/send.png" alt="send logo" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
