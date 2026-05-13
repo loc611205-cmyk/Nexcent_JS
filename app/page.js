@@ -116,6 +116,38 @@ export default function Home() {
     },
   ];
 
+  //  <div class="community_logos">
+  //           <img src="./images/logo_connunity/Logo0.png" alt="" />
+  //           <img src="./images/logo_connunity/Logo2.png" alt="" />
+  //           <img src="./images/logo_connunity/Logo3.png" alt="" />
+  //           <img src="./images/logo_connunity/Logo4.png" alt="" />
+  //           <img src="./images/logo_connunity/Logo5.png" alt="" />
+  //           <h3 class="community_name">Meet all customers →</h3>
+  //         </div>
+
+  const community_right = [
+    {
+      id: 1,
+      icon: "./images/logo_connunity/Logo0.png",
+    },
+    {
+      id: 2,
+      icon: "./images/logo_connunity/Logo2.png",
+    },
+    {
+      id: 3,
+      icon: "./images/logo_connunity/Logo3.png",
+    },
+    {
+      id: 4,
+      icon: "./images/logo_connunity/Logo4.png",
+    },
+    {
+      id: 5,
+      icon: "./images/logo_connunity/Logo5.png",
+    },
+  ];
+
   return (
     <main>
       <header>
@@ -258,6 +290,69 @@ export default function Home() {
         </div>
       </section>
       {/* <!-- Achievement Section --> */}
+
+      {/* <!-- Customers Section --> */}
+      <section className="customers">
+        <div className="logo_customers">
+          <img src="./images/logo_custom/logo1.png" alt="" />
+        </div>
+        <div className="customers_right">
+          <h2 className="title-manage">
+            How to design your site footer like we did
+          </h2>
+          <p className="text_customers">
+            Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor,
+            augue nec tincidunt molestie, massa nunc varius arcu, at scelerisque
+            elit erat a magna. Donec quis erat at libero ultrices mollis. In hac
+            habitasse platea dictumst.
+            <span className="brand_text">Vivamus vehicula</span> leo dui, at
+            porta nisi facilisis finibus. In euismod augue vitae nisi ultricies,
+            non aliquet urna tincidunt. Integer in nisi eget nulla commodo
+            faucibus efficitur quis massa. Praesent felis est, finibus et nisi
+            ac, hendrerit venenatis libero. Donec consectetur faucibus ipsum id
+            gravida.
+          </p>
+          <button className="register">Learn More</button>
+        </div>
+      </section>
+      {/* <!-- Customers Section --> */}
+
+      {/* 
+      <!-- Community Section --> */}
+      <section className="community">
+        <div className="community_left">
+          <img src="./images/logo_connunity/Logo1.png" alt="" />
+        </div>
+
+        <div className="community_right">
+          <p className="community_text">
+            Maecenas dignissim justo eget nulla rutrum molestie. Maecenas
+            lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu
+            enim metus. Vivamus sed libero ornare, tristique quam in, gravida
+            enim. Nullam ut molestie arcu, at hendrerit elit. Morbi laoreet elit
+            at ligula molestie, nec molestie mi blandit. Suspendisse cursus
+            tellus sed augue ultrices, quis tristique nulla sodales. Suspendisse
+            eget lorem eu turpis vestibulum pretium. Suspendisse potenti.
+            Quisque malesuada enim sapien, vitae placerat ante feugiat eget.
+            Quisque vulputate odio neque, eget efficitur libero condimentum id.
+            Curabitur id nibh id sem dignissim finibus ac sit amet magna.
+          </p>
+
+          <h3 className="community_name">Tim Smith</h3>
+          <p className="community_british">
+            British Dragon Boat Racing Association
+          </p>
+          <div className="community_bottom">
+            <div className="community_logos">
+              {community_right.map(function (item) {
+                return <img src={item.icon} alt="Icon" />;
+              })}
+              <h3 className="community_name">Meet all customers →</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* <!-- Community Section --> */}
     </main>
   );
 }
