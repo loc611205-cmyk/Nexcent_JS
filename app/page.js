@@ -86,6 +86,36 @@ export default function Home() {
     },
   ];
 
+  const achievement_right = [
+    {
+      id: 1,
+      icon: "/images/logo_achievement/Icon_1.png",
+      number: "2,245,341",
+      title: "Members",
+    },
+
+    {
+      id: 2,
+      icon: "/images/logo_achievement/logo_2.png",
+      number: "46,328",
+      title: "Clubs",
+    },
+
+    {
+      id: 3,
+      icon: "/images/logo_achievement/Icon_3.png",
+      number: "828,867",
+      title: "Events Bookings",
+    },
+
+    {
+      id: 4,
+      icon: "/images/logo_achievement/Icon_4.png",
+      number: "1,926,436",
+      title: "Payments",
+    },
+  ];
+
   return (
     <main>
       <header>
@@ -176,6 +206,58 @@ export default function Home() {
         </div>
       </section>
       {/* <!-- System Section --> */}
+
+      {/* <!-- Unlock Section --> */}
+      <section className="unlock">
+        <div className="logo_unlock">
+          <img
+            src="./images/logo_unlock/logo_2people.png"
+            alt="logo điện thoại"
+          />
+        </div>
+        <div className="title_text_unlock">
+          <h2 className="title-manage">
+            The unseen of spending three
+            <br />
+            years at Pixelgrade
+          </h2>
+          <p className="text_unlock">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
+            amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
+            Pellentesque placerat vestibulum lorem sed porta. Nullam mattis
+            tristique iaculis. Nullam pulvinar sit amet risus pretium auctor.
+            Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec
+            elementum pulvinar odio.
+          </p>
+          <button className="register">Learn More</button>
+        </div>
+      </section>
+      {/* <!-- Unlock Section --> */}
+
+      {/* <!-- Achievement Section --> */}
+      <section className="achievement">
+        <div className="achievement_list">
+          <h2>
+            Helping a local <br />
+            <span className="brand_text">business reinvent itself</span>
+          </h2>
+          <p>We reached here with our hard work and dedication</p>
+        </div>
+        <div className="achievement_right">
+          {achievement_right.map(function (item) {
+            return (
+              <div key={item.id} className="logo_achievement">
+                <img src={item.icon} alt="Icon" />
+                <div className="logo_text">
+                  <h3>{item.number}</h3>
+                  <p>{item.title}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+      {/* <!-- Achievement Section --> */}
     </main>
   );
 }
