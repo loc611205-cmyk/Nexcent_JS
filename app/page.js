@@ -29,6 +29,63 @@ export default function Home() {
     },
   ];
 
+  const ourclient_img = [
+    {
+      id: 1,
+      icon: "/images/logo_client/logo1.png",
+    },
+    {
+      id: 2,
+      icon: "/images/logo_client/logo2.png",
+    },
+    {
+      id: 3,
+      icon: "/images/logo_client/logo3.png",
+    },
+    {
+      id: 4,
+      icon: "/images/logo_client/logo4.png",
+    },
+    {
+      id: 5,
+      icon: "/images/logo_client/logo5.png",
+    },
+    {
+      id: 6,
+      icon: "/images/logo_client/logo6.png",
+    },
+    {
+      id: 7,
+      icon: "/images/logo_client/log7.png",
+    },
+  ];
+
+  const systems = [
+    {
+      id: 1,
+      icon: "/images/logo_system/Icon.png",
+      title: "Membership Organisations",
+      subtitle:
+        "Our membership management software provides full automation of membership renewals and payments",
+    },
+
+    {
+      id: 2,
+      icon: "/images/logo_system/Icon2.png",
+      title: "National Associations",
+      subtitle:
+        "Our membership management software provides full automation of membership renewals and payments",
+    },
+
+    {
+      id: 3,
+      icon: "/images/logo_system/Icon3.png",
+      title: "Clubs And Groups",
+      subtitle:
+        "Our membership management software provides full automation of membership renewals and payments",
+    },
+  ];
+
   return (
     <main>
       <header>
@@ -77,6 +134,48 @@ export default function Home() {
         </div>
       </section>
       {/* <!-- Banner Section --> */}
+
+      {/* <!-- Our Client Section --> */}
+      <section className="client">
+        <div className="our-client">
+          <h2 className="from">Our Client</h2>
+          <p className="text">
+            We have been working with some Fortune 500+ clients
+          </p>
+        </div>
+        <div className="logo-our">
+          {ourclient_img.map(function (item) {
+            return <img key={item.id} src={item.icon} alt="client logo" />;
+          })}
+        </div>
+      </section>
+      {/* <!-- Our Client Section --> */}
+
+      {/* <!-- System Section --> */}
+
+      <section className="system">
+        <div className="Manage">
+          <h2 className="title-manage">
+            Manage your entire community <br />
+            in a single system
+          </h2>
+
+          <p className="text">Who is Nexcent suitable for?</p>
+        </div>
+
+        <div className="system-list">
+          {systems.map(function (item) {
+            return (
+              <div key={item.id} className="list-one">
+                <img src={item.icon} alt={item.title} />
+                <h3>{item.title}</h3>
+                <p>{item.subtitle}</p>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+      {/* <!-- System Section --> */}
     </main>
   );
 }
