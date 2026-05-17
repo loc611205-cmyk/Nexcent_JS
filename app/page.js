@@ -2,33 +2,6 @@ import Image from "next/image";
 import "./page.css";
 
 export default function Home() {
-  const header_a = [
-    {
-      id: 1,
-      title: "Home",
-    },
-    {
-      id: 2,
-      title: "Services",
-    },
-    {
-      id: 3,
-      title: "Feature",
-    },
-    {
-      id: 4,
-      title: "Product",
-    },
-    {
-      id: 5,
-      title: "Testimonial",
-    },
-    {
-      id: 6,
-      title: "FAQ",
-    },
-  ];
-
   const ourclient_img = [
     {
       id: 1,
@@ -115,15 +88,6 @@ export default function Home() {
       title: "Payments",
     },
   ];
-
-  //  <div class="community_logos">
-  //           <img src="./images/logo_connunity/Logo0.png" alt="" />
-  //           <img src="./images/logo_connunity/Logo2.png" alt="" />
-  //           <img src="./images/logo_connunity/Logo3.png" alt="" />
-  //           <img src="./images/logo_connunity/Logo4.png" alt="" />
-  //           <img src="./images/logo_connunity/Logo5.png" alt="" />
-  //           <h3 class="community_name">Meet all customers →</h3>
-  //         </div>
 
   const community_right = [
     {
@@ -236,33 +200,6 @@ export default function Home() {
 
   return (
     <main>
-      <header>
-        <div className="header-inter">
-          <a href="" className="logo">
-            <img src="./images/logo.png" alt="Nexcent logo" />
-          </a>
-
-          <nav>
-            {header_a.map(function (item) {
-              return (
-                <a key={item.id} href="#">
-                  {item.title}
-                </a>
-              );
-            })}
-          </nav>
-
-          <div className="action-group">
-            <a href="" className="logo-link">
-              Login
-            </a>
-
-            <a href="" className="signup-btn">
-              Signup
-            </a>
-          </div>
-        </div>
-      </header>
       {/* <!-- Banner Section --> */}
       <section className="Banner">
         <div className="hero-frameone">
@@ -469,51 +406,12 @@ export default function Home() {
 
       {/* <!-- Footer Section --> */}
       <section className="footer_section">
-        <h2>Pellentesque suscipit fringilla libero eu.</h2>
+        <h2>
+          Pellentesque suscipit <br /> fringilla libero eu.
+        </h2>
+
         <button className="register">Get a Demo →</button>
       </section>
-
-      <footer className="footer">
-        <div className="footer_container">
-          <div className="footer_left">
-            <div className="footer_left_logo">
-              <img src="./images/logo_footer/Logo.png" alt="Nexcent logo" />
-            </div>
-            <p className="footer_left_text1">Copyright © 2020 Nexcent ltd.</p>
-            <p>All rights reserved</p>
-
-            <div className="footer_logos">
-              {footer_logo.map(function (item) {
-                return <img key={item.id} src={item.icon} alt="Icon" />;
-              })}
-            </div>
-          </div>
-
-          <div className="footer_list">
-            <h3>Company</h3>
-            {footer_list1.map(function (item) {
-              return <p key={item.id}>{item.text}</p>;
-            })}
-          </div>
-
-          <div className="footer_list">
-            <h3>Support</h3>
-            {footer_list2.map(function (item) {
-              return <p key={item.id}>{item.text}</p>;
-            })}
-          </div>
-
-          <div className="footer_list">
-            <h3>Stay up to date</h3>
-            <div className="email_box">
-              <input type="text" placeholder="Your email address" />
-              <div className="send_icon">
-                <img src="./images/logo_footer/send.png" alt="send logo" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
     </main>
   );
 }

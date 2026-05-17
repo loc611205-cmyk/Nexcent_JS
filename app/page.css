@@ -75,6 +75,7 @@ nav a {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 104px;
   padding: 96px 144px;
   background: #f5f7fa;
   margin: auto;
@@ -446,97 +447,3 @@ nav a {
 }
 
 /* -------------------------------------*/
-
-.footer_section {
-  text-align: center;
-  background-color: #f5f7fa;
-  padding-bottom: 32px;
-}
-
-.footer_section h2 {
-  font-size: 64px;
-  line-height: 76px;
-  color: #263238;
-  padding: 32px 276.5px;
-}
-
-.footer_section .register {
-  padding: 14px 18px 14px 32px;
-}
-
-.footer {
-  background: #263238;
-  padding: 64px 165px;
-  color: #fff;
-  margin-bottom: 300px;
-}
-
-.footer_container {
-  display: flex;
-  align-items: flex-start;
-  gap: 125px;
-}
-
-.footer_left_logo {
-  margin-right: 155px;
-  margin-bottom: 40px;
-}
-
-.footer_left p {
-  font-size: 14px;
-  line-height: 20px;
-}
-
-.footer_left_text1 {
-  margin-bottom: 8px;
-}
-
-.footer_logos {
-  display: flex;
-  gap: 16px;
-  margin-top: 16px;
-}
-
-.footer_logos img {
-  width: 32px;
-  height: 32px;
-}
-
-.footer_list h3 {
-  font-size: 20px;
-  line-height: 28px;
-  color: #ffffff;
-  margin-bottom: 24px;
-}
-
-.footer_list p {
-  color: #f5f7fa;
-  font-size: 14px;
-  line-height: 20px;
-  margin-bottom: 8px;
-}
-
-.email_box {
-  display: flex;
-  align-items: center;
-  background: #37474f;
-  padding: 9px 117px 11px 12px;
-  border-radius: 8px;
-  position: relative;
-}
-
-.email_box input {
-  flex: 1;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  color: #fff;
-}
-
-.send_icon {
-  position: absolute;
-  right: 11px;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
