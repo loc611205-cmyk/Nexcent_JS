@@ -22,27 +22,27 @@ export default function RootLayout({ children }) {
     {
       id: 2,
       title: "Services",
-      link: "/Services",
+      link: "/services",
     },
     {
       id: 3,
       title: "Feature",
-      link: "/Feature",
+      link: "/feature",
     },
     {
       id: 4,
       title: "Product",
-      link: "/Product",
+      link: "/product",
     },
     {
       id: 5,
       title: "Testimonial",
-      link: "/Testimonial",
+      link: "/testimonial",
     },
     {
       id: 6,
       title: "FAQ",
-      link: "/FAQ",
+      link: "/faq",
     },
   ];
 

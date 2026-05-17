@@ -1,3 +1,3 @@
 export default function Page() {
-  return <div>Testimonial</div>;
+  return <div> CHÀO MỪNG ĐẾN Testimonial</div>;
 }
