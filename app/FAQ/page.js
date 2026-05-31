@@ -1,3 +1,12 @@
+import NewfaqContainer from "@/new/new1/NewfaqContainer";
+
 export default function Page() {
-  return <div>CHÀO MỪNG ĐẾN FAQ CỦA TÔI</div>;
+  return <NewfaqContainer></NewfaqContainer>;
 }
+
+
+
+
+
+
+

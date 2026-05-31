@@ -15,7 +15,7 @@ export default function Error({ error, reset }) {
 
       <button
         onClick={() => reset()}
-        className="mt-4 px-4 py-2 bg-red-500 text-white rounded"
+        className="mt-4 px-4s py-2 bg-red-500 text-white rounded"
       >
         Thử tải lại xem sao
       </button>
